@@ -25,6 +25,7 @@ nav {
         font-size: 1.5rem;
         justify-content: space-evenly;
         align-items: center;
+        margin-right: 12%;
 
         a {
          text-decoration: none; 
@@ -35,16 +36,23 @@ nav {
 
     .search-box{
         .flex();
-        width: 10%;
-        padding-left: 5%;
-        justify-content: flex-end;
+        width: 15%;
+        justify-content: center;
         margin-top: 1%;
         border-radius: 40px;
+        height: 30px;
+        border-color: @green;
+        box-shadow: 5px 5px 5px grey;
         
+        .search-btn {
+            width: 40px;
+        }
 
         input {
-            text-align: center;
+           
             border: none;
+            color: @green;
+            
         }     
        
     }

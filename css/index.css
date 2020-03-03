@@ -221,6 +221,10 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+#videoBG {
+  position: fixed;
+  z-index: -1;
+}
 /* Nav Bar */
 .header {
   display: flex;
@@ -244,6 +248,7 @@ nav .links {
   font-size: 1.5rem;
   justify-content: space-evenly;
   align-items: center;
+  margin-right: 12%;
 }
 nav .links a {
   text-decoration: none;
@@ -252,15 +257,20 @@ nav .links a {
 nav .search-box {
   display: flex;
   flex-wrap: nowrap;
-  width: 10%;
-  padding-left: 5%;
-  justify-content: flex-end;
+  width: 15%;
+  justify-content: center;
   margin-top: 1%;
   border-radius: 40px;
+  height: 30px;
+  border-color: #628c3d;
+  box-shadow: 5px 5px 5px grey;
+}
+nav .search-box .search-btn {
+  width: 40px;
 }
 nav .search-box input {
-  text-align: center;
   border: none;
+  color: #628c3d;
 }
 .home-body {
   display: flex;
