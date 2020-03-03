@@ -139,7 +139,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 1px solid orangered;
+  /*	border:1px solid orangered; */
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -221,10 +221,6 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-#videoBG {
-  position: fixed;
-  z-index: -1;
-}
 /* Nav Bar */
 .header {
   display: flex;
@@ -236,7 +232,9 @@ nav {
   flex-direction: row;
   width: 100%;
   padding: 0.5%;
-  box-shadow: 10px 10px 5px grey;
+  /*  box-shadow: 10px 10px 5px grey; */
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 5%;
 }
 nav .logo {
   width: 10%;
@@ -263,6 +261,7 @@ nav .search-box {
   border-radius: 40px;
   height: 30px;
   border-color: #628c3d;
+  background-color: white;
   box-shadow: 5px 5px 5px grey;
 }
 nav .search-box .search-btn {
@@ -276,7 +275,10 @@ nav .search-box input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 5%;
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 40px;
 }
 .home-body .main-logo {
   display: flex;
@@ -310,4 +312,8 @@ nav .search-box input {
 }
 .home-body .home-buttons button {
   margin: 2% 8%;
+}
+#videoBG {
+  position: fixed;
+  z-index: -1;
 }
