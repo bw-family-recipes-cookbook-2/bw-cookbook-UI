@@ -1,17 +1,3 @@
-/* examples
-@font-color: @shark;
-@button-bg: @eastern-blue;
-@main-bg:  @white;
-@navigation-border: @silver;
-@footer-bg: @sandy-beach;
-*/
-/* examples
-@silver: #C0C0C0;
-@shark: #212529;
-@eastern-blue: #17A2B8;
-@sandy-beach: #FFEBCD;
-@teal: #238080; 
-*/
 @font-face {
   font-family: 'Simonetta';
   font-style: normal;
@@ -126,7 +112,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  /*	border:1px solid orangered; */
+  /* border:1px solid orangered; */
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -321,7 +307,7 @@ nav .search-box input:focus {
   position: fixed;
   z-index: -1;
 }
-body {
+.meet-container {
   background: url(../src/img/meet.jpg) top left / cover no-repeat;
 }
 .meet-us {
@@ -332,13 +318,13 @@ body {
   justify-content: center;
 }
 .meet-us h3 {
-  width: 40%;
+  width: 38%;
   text-align: center;
-  padding-left: 12%;
+  padding-left: 8%;
   font-family: 'Spartan', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 2.8rem;
-  margin-bottom: 2%;
+  margin-bottom: 1.5%;
 }
 .meet-us .person {
   display: flex;
@@ -349,22 +335,31 @@ body {
   margin-bottom: 2%;
 }
 .meet-us .person img {
-  max-width: 15%;
+  max-width: 10%;
   border-radius: 50%;
   box-shadow: 5px 5px 5px gray;
 }
 .meet-us .person p {
-  margin: 0 8%;
+  margin: 0 4%;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .meet-us .person p a {
   color: #628c3d;
   text-decoration: none;
 }
-.meet-us .person i {
+.meet-us .person p a:hover {
+  color: #8DC300;
+}
+.meet-us .person a {
+  text-decoration: none;
+}
+.meet-us .person a i {
   display: flex;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #628c3d;
   align-content: center;
+}
+.meet-us .person a i:hover {
+  color: #8DC300;
 }
