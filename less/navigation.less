@@ -45,7 +45,7 @@ nav {
         height: 30px;
         border-color: @green;
         background-color: white;
-        box-shadow: 5px 5px 5px grey;
+        box-shadow: 5px 5px 5px @green;
         
         .search-btn {
             width: 40px;
@@ -54,12 +54,20 @@ nav {
         input {
            
             border: none;
+            text-decoration: none;
             color: @green;
             
-        }     
+        }  
+
+        input:focus {
+            outline: none;
+        }
+        
        
     }
-
-
+       
 }
+
+
+
 

@@ -33,19 +33,6 @@
 @phone:~"(max-width: 500px)";
 */
 /*
-.btnSignUp (@justify, @align){
-	display: flex;
-	justify-content: @justify;
-    align-items: @align;
-    background-color: @teal;
-    color: @white;
-    font-size: 1.8rem;
-    width: 100%;
-    padding: 5% 10%;
-    border-radius: 15px;
-    border: 1px solid gray;
-}
-
 .links () {
     text-decoration: none;
     color: black;
@@ -139,7 +126,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  /*	border:1px solid orangered; */
+  border: 1px solid orangered;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -262,14 +249,18 @@ nav .search-box {
   height: 30px;
   border-color: #628c3d;
   background-color: white;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px #628c3d;
 }
 nav .search-box .search-btn {
   width: 40px;
 }
 nav .search-box input {
   border: none;
+  text-decoration: none;
   color: #628c3d;
+}
+nav .search-box input:focus {
+  outline: none;
 }
 .home-body {
   display: flex;
@@ -313,10 +304,67 @@ nav .search-box input {
 .home-body .home-buttons button {
   margin: 2% 8%;
 }
+.home-body .home-buttons .home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #628c3d;
+  color: white;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 2% 2%;
+  border-radius: 15px;
+  border: 1.5px solid whitesmoke;
+  box-shadow: 5px 5px 5px #628c3d;
+}
 #videoBG {
   position: fixed;
   z-index: -1;
 }
 body {
   background: url(../src/img/meet.jpg) top left / cover no-repeat;
+}
+.meet-us {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.meet-us h3 {
+  width: 40%;
+  text-align: center;
+  padding-left: 12%;
+  font-family: 'Spartan', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  margin-bottom: 2%;
+}
+.meet-us .person {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+}
+.meet-us .person img {
+  max-width: 15%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px gray;
+}
+.meet-us .person p {
+  margin: 0 8%;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.meet-us .person p a {
+  color: #628c3d;
+  text-decoration: none;
+}
+.meet-us .person i {
+  display: flex;
+  font-size: 5rem;
+  color: #628c3d;
+  align-content: center;
 }

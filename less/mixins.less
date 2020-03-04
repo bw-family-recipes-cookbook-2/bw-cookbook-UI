@@ -5,20 +5,35 @@
     flex-wrap: nowrap;
 }
 
-/*
+.flex-w () {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.center () {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
 .btnSignUp (@justify, @align){
 	display: flex;
 	justify-content: @justify;
     align-items: @align;
-    background-color: @teal;
-    color: @white;
-    font-size: 1.8rem;
+    background-color: @green;
+    color: white;
+    font-size: 1.2rem;
     width: 100%;
-    padding: 5% 10%;
+    padding: 2% 2%;
     border-radius: 15px;
-    border: 1px solid gray;
+    border: 1.5px solid whitesmoke;
+    box-shadow: 5px 5px 5px @green;
 }
 
+
+
+/*
 .links () {
     text-decoration: none;
     color: black;
