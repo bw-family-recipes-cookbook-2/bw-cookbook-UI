@@ -1,16 +1,18 @@
 
 .home-body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 50%;
+    .flex-w();
+    .center();
+    width: 40%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.85);
+    .background();
     border-radius: 40px;
+    
+
+
     .main-logo {
         display: flex;
         justify-content: center;
-        width: 60%;
+        width: 75%;
 
         img {
             width: 50%;
@@ -24,6 +26,7 @@
         .title-home-intro {
             color: @green;
             font-family: @title;
+            font-size: 2.2rem;
             margin-top: 20px;
         }
 
@@ -33,7 +36,7 @@
             width: 50%;
             line-height: 160%;
             font-family: @copy;
-            font-size: 2rem;
+            font-size: 1.4rem;
  
         }
     }
@@ -42,21 +45,40 @@
         display: flex;
         width: 40%;
         justify-content: center;
+        padding-bottom: 3%;
         
         button {
             margin: 2% 8%;
         }
 
         .home-btn {
-            .btnSignUp (center, center);
+            .btnSignUp(center, center);
+        }
+
+        .home-btn:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            background-position: right center;
         }
     }
-
-
 }
 
 #videoBG {
     position:fixed;
     z-index: -1;
+
+    @media @videomin {
+        width:100%;
+        height: auto;
+    }
+
+    @media @videomax {
+        width:auto;
+        height: 100%;
+    }
+
+    @media @videoposter {
+        display:none;
+    }
+
 }
 

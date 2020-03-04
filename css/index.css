@@ -12,12 +12,6 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/spartan/v1/l7gAbjR61M69yt8Z8w6FZf9WoBxdBrGFuV6JABE.ttf) format('truetype');
 }
-/* examples
-@border: 2px dashed gray;
-
-//mobile
-@phone:~"(max-width: 500px)";
-*/
 /*
 .links () {
     text-decoration: none;
@@ -112,7 +106,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  /* border:1px solid orangered; */
+  /*   border:1px solid orangered; */
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -133,6 +127,12 @@ section {
 }
 body {
   line-height: 1;
+}
+@media (max-width: 767px) {
+  body {
+    background: url('../src/img/poster-start.png');
+    background-size: cover;
+  }
 }
 ol,
 ul {
@@ -190,8 +190,15 @@ img {
   max-width: 100%;
   height: auto;
 }
-.container {
+.home-container {
   width: 100%;
+  min-height: 99.7vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main-meet-container {
+  width: 100%;
+  min-height: 106vh;
   margin: 0 auto;
 }
 /* Nav Bar */
@@ -210,7 +217,10 @@ nav {
   margin-bottom: 5%;
 }
 nav .logo {
+  display: flex;
+  flex-wrap: nowrap;
   width: 15%;
+  justify-content: flex-end;
 }
 nav .links {
   display: flex;
@@ -252,7 +262,9 @@ nav .search-box input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 50%;
+  align-content: center;
+  align-items: center;
+  width: 40%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 40px;
@@ -260,7 +272,7 @@ nav .search-box input:focus {
 .home-body .main-logo {
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 75%;
 }
 .home-body .main-logo img {
   width: 50%;
@@ -272,6 +284,7 @@ nav .search-box input:focus {
 .home-body .home-content .title-home-intro {
   color: #628c3d;
   font-family: 'Simonetta', serif;
+  font-size: 2.2rem;
   margin-top: 20px;
 }
 .home-body .home-content .home-intro {
@@ -280,12 +293,13 @@ nav .search-box input:focus {
   width: 50%;
   line-height: 160%;
   font-family: 'Spartan', sans-serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 .home-body .home-buttons {
   display: flex;
   width: 40%;
   justify-content: center;
+  padding-bottom: 3%;
 }
 .home-body .home-buttons button {
   margin: 2% 8%;
@@ -301,11 +315,42 @@ nav .search-box input:focus {
   padding: 2% 2%;
   border-radius: 15px;
   border: 1.5px solid whitesmoke;
-  box-shadow: 5px 5px 5px #628c3d;
+  /* box-shadow: 5px 5px 5px @green; */
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  width: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: inline-block;
+  background-image: linear-gradient(to right, #628c3d 0%, #8DC300 51%, #628c3d 100%);
+}
+.home-body .home-buttons .home-btn:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background-position: right center;
 }
 #videoBG {
   position: fixed;
   z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #videoBG {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #videoBG {
+    display: none;
+  }
 }
 .meet-container {
   background: url(../src/img/meet.jpg) top left / cover no-repeat;
@@ -362,4 +407,16 @@ nav .search-box input:focus {
 }
 .meet-us .person a i:hover {
   color: #8DC300;
+}
+footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1%;
+  text-align: center;
+  color: #628c3d;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-top: -2.8%;
 }
