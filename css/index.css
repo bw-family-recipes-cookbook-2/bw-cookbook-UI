@@ -514,7 +514,7 @@ nav .search-box input:focus {
 @media (max-width: 500px) {
   .meet-us .meet-content {
     width: 65%;
-    margin-top: 2%;
+    margin: 2% 0 12% 10%;
   }
 }
 .meet-us .meet-content .person {
@@ -649,5 +649,10 @@ footer {
 @media (max-width: 1000px) {
   footer {
     margin-top: 20%;
+  }
+}
+@media (max-width: 500px) {
+  footer {
+    margin-top: 30%;
   }
 }
