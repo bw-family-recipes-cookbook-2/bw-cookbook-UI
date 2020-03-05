@@ -373,6 +373,7 @@ nav .search-box input:focus {
     top: 23%;
     left: 5%;
     width: 90%;
+    overflow-y: scroll;
   }
 }
 .home-body .main-logo {
@@ -476,6 +477,11 @@ nav .search-box input:focus {
   #videoBG {
     width: auto;
     height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #videoBG {
+    display: none;
   }
 }
 .meet-body {
