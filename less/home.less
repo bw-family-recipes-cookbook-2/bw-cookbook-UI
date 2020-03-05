@@ -1,13 +1,28 @@
 
+
+
 .home-body {
     .flex-w();
     .center();
     width: 40%;
-    margin: 0 auto;
     .background();
     border-radius: 40px;
-    
+    position: absolute;
+    top: 25%;
+    left: 30%;
 
+    @media @macbook {
+    top: 20%;
+    }
+
+    @media @desktop {
+    left: 24%;
+    width: 55%;
+    }
+
+    @media @tablet {
+        top: 20%;
+    }
 
     .main-logo {
         display: flex;
@@ -33,10 +48,23 @@
         .home-intro {
             margin-top: 1%;
             display: inline-flex;
-            width: 50%;
+            width: 70%;
             line-height: 160%;
             font-family: @copy;
             font-size: 1.4rem;
+
+            @media @macbook {
+                width: 80%;
+            }
+
+            @media desktop {
+                width: 90%;
+            }
+
+            @media @tablet{
+                font-size: 1.2rem;
+                width: 95%;
+            }
  
         }
     }
@@ -46,6 +74,10 @@
         width: 40%;
         justify-content: center;
         padding-bottom: 3%;
+
+        @media @tablet{
+            width: 50%;
+        }
         
         button {
             margin: 2% 8%;

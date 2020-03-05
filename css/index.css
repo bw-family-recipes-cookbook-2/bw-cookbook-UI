@@ -249,6 +249,11 @@ nav .logo {
   width: 15%;
   justify-content: flex-end;
 }
+@media (max-width: 500px) {
+  nav .logo {
+    width: 50% ;
+  }
+}
 nav .links {
   display: flex;
   flex-wrap: nowrap;
@@ -294,6 +299,7 @@ nav i {
     display: inline-block !important;
     justify-content: flex-end;
     cursor: pointer;
+    width: 80% ;
   }
 }
 nav #toggle {
@@ -339,9 +345,27 @@ nav .search-box input:focus {
   align-content: center;
   align-items: center;
   width: 40%;
-  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 40px;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+}
+@media (max-width: 1400px) {
+  .home-body {
+    top: 20%;
+  }
+}
+@media (max-width: 1000px) {
+  .home-body {
+    left: 24%;
+    width: 55%;
+  }
+}
+@media (max-width: 800px) {
+  .home-body {
+    top: 20%;
+  }
 }
 .home-body .main-logo {
   display: flex;
@@ -364,16 +388,37 @@ nav .search-box input:focus {
 .home-body .home-content .home-intro {
   margin-top: 1%;
   display: inline-flex;
-  width: 50%;
+  width: 70%;
   line-height: 160%;
   font-family: 'Spartan', sans-serif;
   font-size: 1.4rem;
+}
+@media (max-width: 1400px) {
+  .home-body .home-content .home-intro {
+    width: 80%;
+  }
+}
+@media desktop {
+  .home-body .home-content .home-intro {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .home-body .home-content .home-intro {
+    font-size: 1.2rem;
+    width: 95%;
+  }
 }
 .home-body .home-buttons {
   display: flex;
   width: 40%;
   justify-content: center;
   padding-bottom: 3%;
+}
+@media (max-width: 800px) {
+  .home-body .home-buttons {
+    width: 50%;
+  }
 }
 .home-body .home-buttons button {
   margin: 2% 8%;

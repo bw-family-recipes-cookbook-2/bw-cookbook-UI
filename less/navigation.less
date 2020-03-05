@@ -38,6 +38,10 @@ nav {
         .flex();
         width: 15%;
         justify-content: flex-end;
+
+        @media @phone {
+            width: 50% ;
+        }
     }
 
     .links {
@@ -82,9 +86,11 @@ nav {
             display: inline-block !important;
             justify-content: flex-end;
             cursor: pointer;
+            width: 80% ;
+            }
         }
 
-    }
+    
 
     #toggle {
         display: none;
