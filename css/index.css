@@ -106,7 +106,6 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 1px solid orangered;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -138,7 +137,6 @@ body {
   body {
     background: url('../src/img/poster-start.png');
     background-size: cover;
-    background-position: center;
     overflow: hidden;
   }
 }
@@ -225,12 +223,12 @@ nav {
 }
 @media (max-width: 1400px) {
   nav {
-    margin-bottom: 0;
+    margin-bottom: 5%;
   }
 }
 @media (max-width: 1000px) {
   nav {
-    margin-bottom: 1%;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 800px) {
@@ -240,22 +238,35 @@ nav {
 }
 @media (max-width: 500px) {
   nav {
-    margin-bottom: 7%;
+    margin-bottom: 20%;
     padding: 2%;
   }
 }
-nav .logo {
+nav .nav-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+@media (max-width: 500px) {
+  nav .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+nav .nav-container .logo {
   display: flex;
   flex-wrap: nowrap;
   width: 15%;
   justify-content: flex-end;
 }
 @media (max-width: 500px) {
-  nav .logo {
-    width: 50% ;
+  nav .nav-container .logo {
+    width: 100% ;
+    margin-bottom: 2%;
+    justify-content: center;
   }
 }
-nav .links {
+nav .nav-container .links {
   display: flex;
   flex-wrap: nowrap;
   width: 60%;
@@ -265,48 +276,36 @@ nav .links {
   margin-right: 5%;
 }
 @media (max-width: 1000px) {
-  nav .links {
+  nav .nav-container .links {
     margin-right: 2%;
   }
 }
 @media (max-width: 500px) {
-  nav .links {
-    width: 100%;
-    display: none;
+  nav .nav-container .links {
+    width: 100% ;
+    justify-content: space-between;
   }
 }
-nav .links a {
+nav .nav-container .links a {
   text-decoration: none;
   color: #628c3d;
 }
 @media (max-width: 1000px) {
-  nav .links a {
+  nav .nav-container .links a {
     font-size: 1.2rem;
   }
 }
 @media (max-width: 800px) {
-  nav .links a {
+  nav .nav-container .links a {
     font-size: 1rem;
   }
 }
-nav i {
-  margin-right: 1rem;
-  color: #628c3d;
-  font-size: 2rem;
-  display: none !important;
-}
 @media (max-width: 500px) {
-  nav i {
-    display: inline-block !important;
-    justify-content: flex-end;
-    cursor: pointer;
-    width: 80% ;
+  nav .nav-container .links a {
+    font-size: 1.3rem;
   }
 }
-nav #toggle {
-  display: none;
-}
-nav .search-box {
+nav .nav-container .search-box {
   display: flex;
   flex-wrap: nowrap;
   width: 15%;
@@ -319,24 +318,24 @@ nav .search-box {
   box-shadow: 5px 5px 5px #628c3d;
 }
 @media (max-width: 1000px) {
-  nav .search-box {
+  nav .nav-container .search-box {
     width: 20%;
   }
 }
 @media (max-width: 500px) {
-  nav .search-box {
+  nav .nav-container .search-box {
     display: none;
   }
 }
-nav .search-box .search-btn {
+nav .nav-container .search-box .search-btn {
   width: 40px;
 }
-nav .search-box input {
+nav .nav-container .search-box input {
   border: none;
   text-decoration: none;
   color: #628c3d;
 }
-nav .search-box input:focus {
+nav .nav-container .search-box input:focus {
   outline: none;
 }
 .home-body {
@@ -373,7 +372,6 @@ nav .search-box input:focus {
     top: 23%;
     left: 5%;
     width: 90%;
-    overflow-y: scroll;
   }
 }
 .home-body .main-logo {
