@@ -1,22 +1,48 @@
 .meet-container {
    background: url(../src/img/meet.jpg) top left/cover no-repeat;
+
+    @media @desktop {
+        background: url(../src/img/meet.jpg) center/cover no-repeat;
+        margin: 0 auto;
+    }
+
+    @media @tablet {
+        background: url(../src/img/meet.jpg) center/cover no-repeat;
+    }
+    @media @phone {
+        background: url(../src/img/meet.jpg) center/cover no-repeat;
+    }
+
 }
 
 .meet-us {
     .flex-w();
+    .center();
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    
+
 
     h3 {
-        width: 38%;
+        width: 30%;
         text-align: center;
-        padding-left: 8%;
         font-family: @copy;
         font-size: 1.5rem;
         line-height: 2.8rem;
-        margin-bottom: 1.5%
+        margin: 0 1.5% 1.5% 5%;
+
+        @media @desktop {
+           width: 35%;
+           line-height: 1.8rem;
+           font-size: 1rem;
+           margin: 0 0 .5% 2%;
+        }
+
+        @media @tablet {
+            width: 33%;
+            line-height: 1.5rem;
+            font-size: 1rem;
+
+        }
+    
        
     }
 
@@ -24,6 +50,13 @@
         .flex-w();
         .center();
         margin-bottom: 2%;
+
+        @media @desktop {
+            margin: 0 0 .5% 05%;
+        }
+        
+       
+        
         
     
         img {
@@ -31,17 +64,42 @@
             border-radius: 50%;
             box-shadow: 5px 5px 5px gray;
 
+            @media @desktop {
+                max-width: 5%;
+            } 
+            
+            @media @tablet {
+                max-width: 4%;
+            }
+
         }
 
         p {
             margin: 0 4%;
             text-align: center;
             font-size: 1.3rem;
+
+            @media @desktop {
+                padding: .5%;
+                margin: 0 1%;
+                font-size: .8rem;
+                line-height: 1.15rem;
+            }
             
+            @media @tablet {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                font-size: .7rem;
+            }
 
             a {
                 color: @green;
                 text-decoration: none;
+            }
+            @media @desktop {
+                .flex-w();
+                .center();
             }
 
             a:hover {
@@ -60,9 +118,10 @@
                 font-size: 4rem;
                 color: @green;
                 align-content: center;
-                
-                
 
+                @media @desktop {
+                    font-size: 2rem;
+                }
             }
 
             i:hover {

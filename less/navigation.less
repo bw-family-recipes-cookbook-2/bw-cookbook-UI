@@ -12,10 +12,17 @@ nav {
     flex-direction: row;
     width: 100%;
     padding: .5%;
-  /*  box-shadow: 10px 10px 5px grey; */
     .background();
     margin-bottom: 5%;
+
+    @media @desktop {
+        margin-bottom: 1%;
+    }
     
+    @media @tablet {
+        padding: .2%;
+
+    }
 
     .logo{  
         .flex();
@@ -31,9 +38,19 @@ nav {
         align-items: center;
         margin-right: 5%;
 
+        @media @tablet {
+            margin-right: 2%;
+        }
+
         a {
          text-decoration: none; 
          color: @green;  
+
+         @media @tablet {
+            font-size: 1.2rem;
+  
+        }
+
         }
     }
 
@@ -48,6 +65,10 @@ nav {
         border-color: @green;
         background-color: white;
         box-shadow: 5px 5px 5px @green;
+
+        @media @tablet {
+            width: 20%;
+        }
         
         .search-btn {
             width: 40px;
