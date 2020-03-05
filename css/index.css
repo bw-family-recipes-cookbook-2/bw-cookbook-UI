@@ -200,7 +200,6 @@ img {
 .home-container {
   width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
 }
 @media (max-width: 1400px) {
   .home-container {
@@ -220,6 +219,8 @@ nav {
   padding: 0.5%;
   background-color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2%;
+  position: fixed;
+  top: 0;
 }
 @media (max-width: 1400px) {
   nav {
@@ -239,6 +240,7 @@ nav {
 @media (max-width: 500px) {
   nav {
     margin-bottom: 7%;
+    padding: 2%;
   }
 }
 nav .logo {
@@ -271,9 +273,14 @@ nav .links a {
   text-decoration: none;
   color: #628c3d;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   nav .links a {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 800px) {
+  nav .links a {
+    font-size: 1rem;
   }
 }
 nav i {
@@ -429,6 +436,11 @@ nav .search-box input:focus {
   background-position: center;
   background-attachment: fixed;
 }
+@media (max-width: 500px) {
+  .meet-body {
+    overflow-y: scroll;
+  }
+}
 .meet-us {
   display: flex;
   flex-wrap: wrap;
@@ -443,18 +455,18 @@ nav .search-box input:focus {
   font-family: 'Spartan', sans-serif;
   font-size: 1.5rem;
   line-height: 2.8rem;
-  margin: 0 1.5% 1.5% 5%;
+  margin: 6% 1.5% 1.5% 5%;
 }
 @media (max-width: 1400px) {
   .meet-us h3 {
     width: 35%;
-    margin: 2% 0 1% 5%;
+    margin: 7% 0 1% 5%;
   }
 }
 @media (max-width: 1000px) {
   .meet-us h3 {
-    width: 30%;
-    margin-top: 3%;
+    width: 32%;
+    margin-top: 8%;
     line-height: 1.8rem;
     font-size: 1.2rem;
   }
@@ -464,10 +476,12 @@ nav .search-box input:focus {
     width: 35%;
     line-height: 1.5rem;
     font-size: 1rem;
+    margin-top: 10%;
   }
 }
 @media (max-width: 500px) {
   .meet-us h3 {
+    margin-top: 15%;
     width: 60%;
   }
 }
@@ -482,24 +496,24 @@ nav .search-box input:focus {
 @media (max-width: 1400px) {
   .meet-us .meet-content {
     width: 30%;
-    margin-left: 6%;
+    margin: 0 0 5% 6%;
   }
 }
 @media (max-width: 1000px) {
   .meet-us .meet-content {
     flex-direction: column;
-    width: 40%;
+    width: 50%;
   }
 }
 @media (max-width: 800px) {
   .meet-us .meet-content {
-    width: 44%;
-    margin-top: 2%;
+    width: 35%;
+    margin-top: 0;
   }
 }
 @media (max-width: 500px) {
   .meet-us .meet-content {
-    width: 70%;
+    width: 65%;
     margin-top: 2%;
   }
 }
@@ -514,13 +528,12 @@ nav .search-box input:focus {
 }
 @media (max-width: 1400px) {
   .meet-us .meet-content .person {
-    margin: 0 0 0.3% 0%;
+    margin: 0 0 5% 0%;
   }
 }
 @media (max-width: 1000px) {
   .meet-us .meet-content .person {
-    justify-content: center;
-    width: 100%;
+    width: 60%;
     margin-bottom: 5%;
   }
 }
@@ -541,12 +554,12 @@ nav .search-box input:focus {
 }
 @media (max-width: 800px) {
   .meet-us .meet-content .person img {
-    max-width: 15%;
+    max-width: 14%;
   }
 }
 @media (max-width: 500px) {
   .meet-us .meet-content .person img {
-    max-width: 25%;
+    max-width: 20%;
     margin-top: 2%;
   }
 }
@@ -577,7 +590,7 @@ nav .search-box input:focus {
 }
 @media (max-width: 500px) {
   .meet-us .meet-content .person p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2rem;
   }
 }
@@ -613,7 +626,7 @@ nav .search-box input:focus {
 }
 @media (max-width: 500px) {
   .meet-us .meet-content .person a i {
-    display: none;
+    font-size: 2.5rem;
   }
 }
 .meet-us .meet-content .person a i:hover {
@@ -629,6 +642,7 @@ footer {
   color: #628c3d;
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.85);
+  position: fixed;
   bottom: 0;
   min-width: 100%;
 }

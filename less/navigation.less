@@ -14,6 +14,8 @@ nav {
     padding: .5%;
     .background();
     margin-bottom: 2%;
+    position: fixed;
+    top: 0;
 
     @media @macbook {
         margin-bottom: 0;
@@ -29,6 +31,7 @@ nav {
 
     @media @phone {
         margin-bottom: 7%;
+        padding: 2%;
     }
 
     .logo{  
@@ -58,8 +61,12 @@ nav {
          text-decoration: none; 
          color: @green;  
 
-         @media @tablet {
+         @media @desktop {
             font-size: 1.2rem;
+        }
+
+        @media @tablet {
+            font-size: 1rem;
         }
 
         }
