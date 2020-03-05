@@ -13,7 +13,11 @@ nav {
     width: 100%;
     padding: .5%;
     .background();
-    margin-bottom: 5%;
+    margin-bottom: 2%;
+
+    @media @macbook {
+        margin-bottom: 0;
+    }
 
     @media @desktop {
         margin-bottom: 1%;
@@ -21,7 +25,10 @@ nav {
     
     @media @tablet {
         padding: .2%;
+    }
 
+    @media @phone {
+        margin-bottom: 7%;
     }
 
     .logo{  
@@ -38,8 +45,13 @@ nav {
         align-items: center;
         margin-right: 5%;
 
-        @media @tablet {
+        @media @desktop {
             margin-right: 2%;
+        }
+
+        @media @phone {
+            width: 100%;
+            display: none;
         }
 
         a {
@@ -48,12 +60,28 @@ nav {
 
          @media @tablet {
             font-size: 1.2rem;
-  
         }
 
         }
     }
 
+    i {
+        margin-right: 1rem;
+        color: @green;
+        font-size: 2rem;
+        display: none !important;
+
+        @media @phone {
+            display: inline-block !important;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+
+    }
+
+    #toggle {
+        display: none;
+    }
 
     .search-box{
         .flex();
@@ -66,8 +94,12 @@ nav {
         background-color: white;
         box-shadow: 5px 5px 5px @green;
 
-        @media @tablet {
+        @media @desktop {
             width: 20%;
+        }
+
+        @media @phone {
+            display: none;
         }
         
         .search-btn {
@@ -75,7 +107,6 @@ nav {
         }
 
         input {
-           
             border: none;
             text-decoration: none;
             color: @green;
