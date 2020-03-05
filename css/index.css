@@ -106,6 +106,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
+  border: 1px solid orangered;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -215,11 +216,10 @@ nav {
   flex-wrap: nowrap;
   flex-direction: row;
   width: 100%;
-  padding: 0.5%;
-  background-color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2%;
   position: fixed;
   top: 0;
+  left: 0;
 }
 @media (max-width: 1400px) {
   nav {
@@ -244,6 +244,8 @@ nav {
 }
 nav .nav-container {
   width: 100%;
+  padding: 0.5%;
+  background-color: rgba(255, 255, 255, 0.85);
   display: flex;
   flex-wrap: nowrap;
 }
@@ -348,7 +350,8 @@ nav .nav-container .search-box input:focus {
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 40px;
   position: absolute;
-  top: 25%;
+  margin-top: 13%;
+  top: 40%;
   left: 30%;
 }
 @media (max-width: 1400px) {
