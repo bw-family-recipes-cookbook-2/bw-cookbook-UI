@@ -86,6 +86,20 @@ nav {
             @media @phone {
                 font-size: 1.3rem;
             }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background: @lgreen;
+                transition: width .2s;
+            }
+
+            &:hover::after {
+                width: 100%;
+                transition: width .2s;
+            }
         }
 
     }

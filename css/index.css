@@ -306,6 +306,18 @@ nav .nav-container .links a {
     font-size: 1.3rem;
   }
 }
+nav .nav-container .links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #8DC300;
+  transition: width 0.2s;
+}
+nav .nav-container .links a:hover::after {
+  width: 100%;
+  transition: width 0.2s;
+}
 nav .nav-container .search-box {
   display: flex;
   flex-wrap: nowrap;
@@ -447,7 +459,6 @@ nav .nav-container .search-box input:focus {
   padding: 2% 2%;
   border-radius: 15px;
   border: 1.5px solid whitesmoke;
-  /* box-shadow: 5px 5px 5px @green; */
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
@@ -546,6 +557,7 @@ nav .nav-container .search-box input:focus {
   align-content: center;
   align-items: center;
   width: 28%;
+  margin-bottom: 5%;
 }
 @media (max-width: 1400px) {
   .meet-us .meet-content {
